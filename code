@@ -1,0 +1,40 @@
+<?php
+
+$first_name = $_POST["first_name"];
+
+// Array of middle names
+$middle_names = array(
+    "James",
+    "Elizabeth",
+    "David",
+    "Ann",
+    "Robert",
+    "Grace",
+    "Michael",
+    "Marie",
+    "John",
+    "Michelle",
+    "William",
+    "Lynn",
+    "Christopher",
+    "Rose",
+    "Thomas",
+    "Victoria",
+    "Joseph",
+    "Anne",
+    "Jennifer",
+    "Patrick",
+    "Emily",
+);
+
+// Select a random middle name from the array
+$random_middle_name = $middle_names[array_rand($middle_names)];
+
+// Generate the full name
+$full_name = $first_name . " " . $random_middle_name;
+
+// Display the full name on the webpage
+echo "<h1>Your suggested name is:</h1>";
+echo "<h2>$full_name</h2>";
+
+?>
